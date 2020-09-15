@@ -12,6 +12,10 @@ def home():
 def about():
     return render_template('about.template.html')
 
+@app.route('/our-vision')
+def about():
+    return render_template('vision.template.html')
+
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':

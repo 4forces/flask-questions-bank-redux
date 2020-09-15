@@ -11,8 +11,7 @@ def home():
 
 @app.route('/about')
 def about():
-    pass
-
+    return render_template('about.template.html')
 
 # "magic code" -- boilerplate
 if __name__ == '__main__':
