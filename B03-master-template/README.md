@@ -5,7 +5,7 @@ for the `Getting Started Template`).
 
 For each template, add the content within a Bootstrap container.
 
-## Create a new route
+## Create a new route## 
 Create a new route, `\our-vision`, which will display the following text:
 
 ```
