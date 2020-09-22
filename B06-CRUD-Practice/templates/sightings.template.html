@@ -1,0 +1,31 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Email</th>
+            <th>Duration</th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    {% for each_sighting in database %}
+        <tr>
+            <td>{{each_sighting.title}}</td>
+            <td>{{each_sighting.date}}</td>
+            <td>{{each_sighting.time}}</td>
+            <td>{{each_sighting.email}}</td>
+            <td>{{each_sighting.duration}}</td>
+            <td>{{each_sighting.lat}}</td>
+            <td>{{each_sighting.lon}}</td>
+            <td>{{each_sighting.desc}}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+{%endblock%}

@@ -12,7 +12,7 @@ with open('data.json', 'r') as fp:
 
 @app.route("/")
 def home():
-    return "Home page"
+    return render_template('home.template.html')
 
 @app.route("/ufo-sightings")
 def show_sightings():
@@ -24,14 +24,16 @@ def create_sightings():
 
 @app.route('/sightings/create', methods=["POST"])
 def process_create_sightings():
+    print(request.form)
     new_sighting = {
+        "id": random.randint(100000,999999),
         "title": request.form.get("title"),
         "date": request.form.get("date"),
         "time": request.form.get("time"),
         "email": request.form.get("email"),
         "duration": request.form.get("duration"),
         "lat": request.form.get("lat"),
-        "lng": request.form.get("lng"),
+        "lon": request.form.get("lon"),
         "desc": request.form.get("desc")
         }
     database.append(new_sighting)
