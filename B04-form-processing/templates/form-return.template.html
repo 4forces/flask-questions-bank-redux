@@ -1,0 +1,14 @@
+
+{% extends 'home.template.html' %}
+
+{% block content %}
+
+<h3> Form Submission Summary</h3>
+<ul>
+    <li>Name: {{name}}</li>
+    <li>Gender: {{sex}}</li>
+    <li>Can we contact you: {% if contactable==True %} Yes {%else%} No {%endif%}</li>
+    <li>Comments: {{comment}}</li>
+    <li>Accepted T&Cs: {{termscons}}</li>
+</ul>
+{% endblock %}

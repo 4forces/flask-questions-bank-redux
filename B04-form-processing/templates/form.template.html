@@ -1,20 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'home.template.html' %}
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
-</head>
+{% block content %}
 
-<body>
-
+<h1> Contact Us </h1>
 	<form method="POST">
 		<label for="name">Name</label><br />
-		<input name="name" type="text" value="Frank" /> <br />
-		<input checked="checked" name="sex" type="radio" value="male" /> Male <br />
-		<input name="sex" type="radio" value="female" /> Female <br />
-		<textarea cols="30" rows="2" name="comment">Comment</textarea><br />
+            <input name="name" type="text" value="Frank" /> <br />
+            <input name="sex" type="radio" value="male" checked="checked" /> Male <br />
+            <input name="sex" type="radio" value="female" /> Female <br />
+            <textarea name="comment" cols="30" rows="2" >Comment</textarea><br />
         <label>Can we spam you?</label>
         <select name="can-contact"> 
             <option selected="selected" value="1">Yes</option>
@@ -24,6 +18,4 @@
 		<button type="submit" value="Submit">Submit</button>
 	</form>
 
-</body>
-
-</html>
+{% endblock %}
