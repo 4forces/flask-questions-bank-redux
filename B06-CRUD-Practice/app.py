@@ -25,9 +25,14 @@ def create_sightings():
 @app.route('/sightings/create', methods=["POST"])
 def process_create_sightings():
     new_sighting = {
-        "id": random.randint(10000,99999),
         "title": request.form.get("title"),
-        "author": request.form.get("author")
+        "date": request.form.get("date"),
+        "time": request.form.get("time"),
+        "email": request.form.get("email"),
+        "duration": request.form.get("duration"),
+        "lat": request.form.get("lat"),
+        "lng": request.form.get("lng"),
+        "desc": request.form.get("desc")
         }
     database.append(new_sighting)
 
