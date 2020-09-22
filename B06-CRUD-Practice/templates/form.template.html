@@ -1,0 +1,43 @@
+{% extends 'base.template.htm' %}
+
+{% block content %}}
+
+<form method="POST">
+    <div>
+        <label class="form-label">Title:</label>
+        <input type="text" class="form-control" name="title" placeholder="Enter title">
+    </div>
+    <div>
+        <label class="form-label">Date:</label>
+        <input type="text" class="form-control" name="date" placeholder="Enter date">
+    </div>
+        <div>
+        <label class="form-label">Time:</label>
+        <input type="text" class="form-control" name="time" placeholder="Enter time">
+    </div>
+    <div>
+        <label class="form-label">Email:</label>
+        <input type="text" class="form-control" name="email" placeholder="Enter email">
+    </div>
+    <div>
+        <label class="form-label">Duration:</label>
+        <input type="number" class="form-control" name="duration" placeholder="Enter duration">
+    </div>
+    <div>
+    <div>
+        <label class="form-label">Latitude:</label>
+        <input type="number" class="form-control" name="lat" placeholder="Enter latitude">
+    </div>
+        <div>
+        <label class="form-label">Longitude:</label>
+        <input type="number" class="form-control" name="lgt" placeholder="Enter longitude">
+    </div>
+    <div>
+        <label class="form-label">Description:</label>
+        <input type="text" class="form-control" name="descr" placeholder="Enter description">
+    </div>
+
+    <input type="submit" class="btn btn-primary">
+</form>
+
+{%endblock%}
