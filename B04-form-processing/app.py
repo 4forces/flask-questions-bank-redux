@@ -44,9 +44,12 @@ def process_contact():
     else:
         contactable = False
 
-    # if termscons == None:
-    #     return render_template("form.template.html",
-    #                            message="Please accept the checkbox")
+    if termscons == None:
+        return render_template("form.template.html",
+                               message="Please check the checkbox"
+                               )
+    else:
+        termscons = "Yes"
 
     return render_template('form-return.template.html', 
                            name=name, 
