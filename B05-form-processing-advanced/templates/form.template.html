@@ -1,0 +1,28 @@
+{% extends 'base.template.html' %}
+
+{% block content %}
+
+<div class="m-3">
+    <form>
+    <div class="form-group">
+            <label >Name:</label>
+            <input type="text" name="name"/>
+        </div>
+        <div class="form-group">
+            <label><b>Select your appetizers</b></label></br>
+            <input type="checkbox" name="appetizers"/> Overprized chilled seafood ($3.00)</br>
+            <input type="checkbox" name="appetizers"/> Fries Sprinkled with Fake Truffle Powder ($4.50)</br>
+            <input type="checkbox" name="appetizers"/> Minimal Effort Salad ($6.00)
+        </div>
+        <div class="form-group">
+            <label><b>Select your Seating</b></label></br>
+            <input type="radio" name="outdoors"/> Outdoors</br>
+            <input type="radio" name="indoors"/> Indoors</br>
+            <input type="radio" name="vip"/> Indoors (VIP, +$10.00)
+        </div>
+        <input type="submit"/>
+    </form>
+</div>
+
+
+{% endblock %}

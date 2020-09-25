@@ -5,16 +5,24 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('home.template.html')
+    return render_template('home.template.html', page_title="Home")
 
-@app.route('/')
-def number_game():
-    return render_template('input.template.html')
+@app.route('/form')
+def form():
+    return render_template('form.template.html', page_title='Form')
 
-@app.route('/num-game', methods=['POST'])
-def process_number():
-    num = int(request.form.get('number'))
-    return render_template('process_num.template.html', num=num)
+
+@app.route('/form', methods = ['POST'])
+def process_form():
+
+    return "form received"
+
+    print(request.form)
+
+    name = request.form("")
+
+    return "ok"
+
 
 
 # "magic code" -- boilerplate
